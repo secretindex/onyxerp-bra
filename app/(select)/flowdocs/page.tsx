@@ -19,10 +19,10 @@ const Flowdocs = () => {
 
   useEffect(() => {
     const fetchFlowdocsClients = async () => {
-      const { data, error } = await supabase.from("fopag_clientes").select("*");
+      const { data, error } = await supabase.from("flowdocs_clientes").select("*");
 
       if (error) {
-        console.error("Error fetching Fopag Clients:", error);
+        console.error("Error fetching Flowdocs Clients:", error);
       } else {
         setFlowdocsClientes(data as Array<any>);
         console.log("Fetched clients:", data);
