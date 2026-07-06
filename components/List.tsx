@@ -111,7 +111,7 @@ const apps: App[] = [
     name: "Cadastro",
     icon: <AssignmentIndIcon />,
     url: "https://www.onyxerp.com.br/Cadastro/",
-    description: "Cadastro de segurados do RPPS (Uso exclusivo de Guarulhos)",
+    description: "Cadastro de segurados do RPPS",
   },
 ];
 
