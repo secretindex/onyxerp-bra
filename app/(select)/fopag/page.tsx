@@ -42,7 +42,7 @@ const Fopag = () => {
           <FieldLabel className="text-xs">Estado</FieldLabel>
           <Select
             onValueChange={(value) => {
-              if (value === "")
+              if (value.length <= 0)
                 return
 
               if (value.includes("://")) {
