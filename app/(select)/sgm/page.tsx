@@ -43,14 +43,13 @@ const SGM = () => {
           <FieldLabel className="text-xs">Estado</FieldLabel>
           <Select
             onValueChange={(value) => {
-              if (value === "")
-                return
+              if (value === "") return;
 
               if (value.includes("://")) {
-                window.open(value, "_blank");
+                window.location.href = value;
               } else {
                 const newUrl = `https://${value}/`;
-                window.open(newUrl);
+                window.location.href = newUrl;
               }
             }}
           >
@@ -59,9 +58,7 @@ const SGM = () => {
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="">
-                  Selecione
-                </SelectItem>
+                <SelectItem value="">Selecione</SelectItem>
                 {sgmClientes?.map((cliente) => {
                   return (
                     <SelectItem key={cliente.id} value={`${cliente.url}`}>

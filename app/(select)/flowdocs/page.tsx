@@ -19,7 +19,9 @@ const Flowdocs = () => {
 
   useEffect(() => {
     const fetchFlowdocsClients = async () => {
-      const { data, error } = await supabase.from("flowdocs_clientes").select("*");
+      const { data, error } = await supabase
+        .from("flowdocs_clientes")
+        .select("*");
 
       if (error) {
         console.error("Error fetching Flowdocs Clients:", error);
@@ -42,13 +44,13 @@ const Flowdocs = () => {
           <FieldLabel className="text-xs">Estado</FieldLabel>
           <Select
             onValueChange={(value) => {
-              if (value === "") return
+              if (value === "") return;
 
               if (value.includes("://")) {
-                window.open(value, "_blank");
+                window.location.href = value;
               } else {
                 const newUrl = `https://${value}/`;
-                window.open(newUrl);
+                window.location.href = newUrl;
               }
             }}
           >
@@ -57,9 +59,7 @@ const Flowdocs = () => {
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="">
-                  Selecione
-                </SelectItem>
+                <SelectItem value="">Selecione</SelectItem>
                 {flowdocsClientes?.map((cliente) => {
                   return (
                     <SelectItem key={cliente.id} value={`${cliente.url}`}>
