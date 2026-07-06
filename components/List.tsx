@@ -90,14 +90,14 @@ const apps: App[] = [
     name: "SGM",
     icon: <ChartNoAxesCombined size={24} />,
     url: "/sgm",
-    description: "Sistemas analítico de dados da Folha de Pagamento",
+    description: "Sistema analítico de dados da Folha de Pagamento",
   },
   {
     id: 8,
     name: "Flowdocs",
     icon: <ChromeReaderModeIcon />,
     url: "/flowdocs",
-    description: "Gestão de documentos e fluxos",
+    description: "Gestão de fluxos de documentos",
   },
   {
     id: 9,
