@@ -128,7 +128,7 @@ const List = () => {
           >
             <div
               onClick={() => redirect(app.url)}
-              className="w-18 h-18 shrink-0 rounded-full border border-white/20 bg-transparent flex items-center justify-center cursor-pointer hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+              className="w-20 h-20 shrink-0 rounded-full border border-white/20 bg-transparent flex items-center justify-center cursor-pointer hover:bg-white/10 hover:border-white/40 transition-all duration-300"
               onMouseOver={() => {
                 setApps({
                   name: app.name,
