@@ -4,18 +4,15 @@ import { App } from "@/Context/AppsContext";
 import { useContext } from "react";
 import { AppsContext } from "@/Context/AppsContext";
 
-import PeopleIcon from '@mui/icons-material/People';
-import DoneAllIcon from '@mui/icons-material/DoneAll';
-import ChromeReaderModeIcon from "@mui/icons-material/ChromeReaderMode"
-import AccountBalanceIcon from '@mui/icons-material/AccountBalance';
-import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
+import PeopleIcon from "@mui/icons-material/People";
+import DoneAllIcon from "@mui/icons-material/DoneAll";
+import ChromeReaderModeIcon from "@mui/icons-material/ChromeReaderMode";
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
+import AssignmentIndIcon from "@mui/icons-material/AssignmentInd";
 
 import Image from "next/image";
 
-import {
-  IdCardLanyard,
-  ChartNoAxesCombined,
-} from "lucide-react";
+import { IdCardLanyard, ChartNoAxesCombined } from "lucide-react";
 
 import { redirect } from "next/navigation";
 
@@ -25,20 +22,35 @@ const apps: App[] = [
     name: "Social",
     icon: <PeopleIcon />,
     url: "https://www.onyxerp.com.br/Social/",
-    description: "Gerenciamento de cadastros de pessoas do RPPS",
+    description: "Gerenciamento de cadastros de segurados do RPPS",
   },
   {
     id: 2,
     name: "Processos",
-    icon: <Image alt="Processos" src="https://storage3.onyxerp.com.br/logo_processos_bra_branco.png" width={12} height={12} className="" />,
+    icon: (
+      <Image
+        alt="Processos"
+        src="https://storage3.onyxerp.com.br/logo_processos_bra_branco.png"
+        width={12}
+        height={12}
+        className=""
+      />
+    ),
     url: "https://www.onyxerp.com.br/Processos/",
-    description:
-      "Gestão de Simulação e Concessão de Benefícios",
+    description: "Gestão de Simulação e Concessão de Benefícios",
   },
   {
     id: 3,
     name: "GIR",
-    icon: <Image alt="GIR" src="https://onyxerp.s3.us-east-2.amazonaws.com/logo-gir.png" height={24} width={24} className="material-icons" />,
+    icon: (
+      <Image
+        alt="GIR"
+        src="https://onyxerp.s3.us-east-2.amazonaws.com/logo-gir.png"
+        height={24}
+        width={24}
+        className="material-icons"
+      />
+    ),
     url: "https://www.onyxerp.com.br/Gir/",
     description:
       "Gestão de Guias de Recolhimento, tratamento e leitura de dados com IA",
@@ -53,36 +65,49 @@ const apps: App[] = [
   },
   {
     id: 5,
-    name: "Fopag",
-    icon: <Image src="https://onyxerp.s3.us-east-2.amazonaws.com/logo-fopag.png" alt="fopag" width={24} height={24} />,
-    url: "/fopag",
+    name: "Digitalprev",
+    icon: <Image src={"/onyx.svg"} alt="DigitalPrev" width={24} height={24} />,
+    url: "/digitalprev",
     description:
-      "Gestão de folhas de pagamento através do Sistema SIP 7.0 da Fiorilli",
+      "Aplicativo móvel, para os segurados, de simulação de regras de aposentadoria e consulta de contracheque",
   },
   {
     id: 6,
-    name: "SGM",
-    icon: <ChartNoAxesCombined size={24} />,
-    url: "/sgm",
-    description:
-      "Sistemas analítico de dados da Folha de Pagamento",
+    name: "Fopag",
+    icon: (
+      <Image
+        src="https://onyxerp.s3.us-east-2.amazonaws.com/logo-fopag.png"
+        alt="fopag"
+        width={24}
+        height={24}
+      />
+    ),
+    url: "/fopag",
+    description: "Gestão de folhas de pagamento",
   },
   {
     id: 7,
+    name: "SGM",
+    icon: <ChartNoAxesCombined size={24} />,
+    url: "/sgm",
+    description: "Sistemas analítico de dados da Folha de Pagamento",
+  },
+  {
+    id: 8,
     name: "Flowdocs",
     icon: <ChromeReaderModeIcon />,
     url: "/flowdocs",
     description: "Gestão de documentos e fluxos",
   },
   {
-    id: 8,
+    id: 9,
     name: "Conselho",
     icon: <AccountBalanceIcon />,
     url: "https://www.onyxerp.com.br/Conselho/",
     description: "Gestão para eleição de membros de conselhos",
   },
   {
-    id: 9,
+    id: 10,
     name: "Cadastro",
     icon: <AssignmentIndIcon />,
     url: "https://www.onyxerp.com.br/Cadastro/",
