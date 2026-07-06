@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
     <BodyWithWallpapers>
       <AppsProvider>
         <div className="h-dvh max-h-dvh flex flex-col justify-between p-4 md:p-6 lg:px-16 lg:py-6 text-white font-sans box-border overflow-hidden">
-          <header className="w-full flex-shrink-0">
+          <header className="w-full shrink-0">
             <Header />
           </header>
           <main className="flex-1 flex flex-col justify-end items-center w-full min-h-0 my-4 md:my-6">
@@ -16,7 +16,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
               {children}
             </div>
           </main>
-          <footer className="w-full flex-shrink-0 flex flex-col items-center">
+          <footer className="w-full shrink-0 flex flex-col items-center">
             <a
               href="https://www.braconsultoria.com.br/"
               target="_blank"

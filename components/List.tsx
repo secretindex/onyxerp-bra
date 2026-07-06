@@ -53,7 +53,7 @@ const apps: App[] = [
     ),
     url: "https://www.onyxerp.com.br/Gir/",
     description:
-      "Gestão de Guias de Recolhimento, tratamento e leitura de dados com IA",
+      "Gestão de arrecadação das contribuições previdenciárias",
   },
   {
     id: 4,
