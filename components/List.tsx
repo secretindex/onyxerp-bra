@@ -33,7 +33,7 @@ const apps: App[] = [
     icon: <Image alt="Processos" src="https://storage3.onyxerp.com.br/logo_processos_bra_branco.png" width={12} height={12} className="" />,
     url: "https://www.onyxerp.com.br/Processos/",
     description:
-      "Gestão de processos, simulações de benefícios e parametrização de leis",
+      "Gestão de Simulação e Concessão de Benefícios",
   },
   {
     id: 3,
@@ -65,28 +65,28 @@ const apps: App[] = [
     icon: <ChartNoAxesCombined size={24} />,
     url: "/sgm",
     description:
-      "Sistemas de Gestão Municipal para prefeituras e órgãos públicos",
+      "Sistemas analítico de dados da Folha de Pagamento",
   },
   {
     id: 7,
     name: "Flowdocs",
     icon: <ChromeReaderModeIcon />,
     url: "/flowdocs",
-    description: "Gestão de documentos e fluxos para prefeitura",
+    description: "Gestão de documentos e fluxos",
   },
   {
     id: 8,
     name: "Conselho",
     icon: <AccountBalanceIcon />,
     url: "https://www.onyxerp.com.br/Conselho/",
-    description: "Gestão de conselhos e órgãos",
+    description: "Gestão para eleição de membros de conselhos",
   },
   {
     id: 9,
     name: "Cadastro",
     icon: <AssignmentIndIcon />,
     url: "https://www.onyxerp.com.br/Cadastro/",
-    description: "Cadastro de pessoas do RPPS (Uso exclusivo de Guarulhos)",
+    description: "Cadastro de segurados do RPPS (Uso exclusivo de Guarulhos)",
   },
 ];
 
@@ -103,7 +103,7 @@ const List = () => {
           >
             <div
               onClick={() => redirect(app.url)}
-              className="w-16 h-16 flex-shrink-0 rounded-full border border-white/20 bg-transparent flex items-center justify-center cursor-pointer hover:bg-white/10 hover:border-white/40 transition-all duration-300"
+              className="w-18 h-18 shrink-0 rounded-full border border-white/20 bg-transparent flex items-center justify-center cursor-pointer hover:bg-white/10 hover:border-white/40 transition-all duration-300"
               onMouseOver={() => {
                 setApps({
                   name: app.name,

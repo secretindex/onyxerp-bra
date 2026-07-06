@@ -42,14 +42,13 @@ const Fopag = () => {
           <FieldLabel className="text-xs">Estado</FieldLabel>
           <Select
             onValueChange={(value) => {
-              if (value.length <= 0)
-                return
+              if (value.length <= 0) return;
 
               if (value.includes("://")) {
-                window.open(value);
+                window.location.href = value;
               } else {
                 const newUrl = `https://${value}/`;
-                window.open(newUrl);
+                window.location.href = newUrl;
               }
             }}
           >
@@ -58,9 +57,7 @@ const Fopag = () => {
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectItem value="">
-                  Selecione
-                </SelectItem>
+                <SelectItem value="">Selecione</SelectItem>
                 {fopagClients?.map((cliente) => {
                   return (
                     <SelectItem key={cliente.id} value={`${cliente.url}`}>
