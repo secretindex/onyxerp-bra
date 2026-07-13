@@ -8,14 +8,6 @@ export interface App {
   url: string;
 }
 
-// i need to create the apps context to manage the apps data
-// the apps data will be an array of objects with the following properties:
-// - id: number
-// - name: string
-// - description: string
-// - icon: React.ReactNode
-// - url: string
-
 import { createContext, useState } from "react";
 
 export const AppsContext = createContext<{
